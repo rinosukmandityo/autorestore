@@ -102,7 +102,7 @@ func DownloadObjectsFromS3(fileconfig FileDetail, s3config S3Detail) {
 			return
 		}
 		// Get all files
-		NewSyncWalBucket(fileconfig, resp, iter)
+		NewSyncWalkBucket(fileconfig, resp, iter)
 		// Set continuation token
 		query.ContinuationToken = resp.NextContinuationToken
 		truncatedListing = *resp.IsTruncated

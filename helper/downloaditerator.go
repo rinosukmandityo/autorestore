@@ -21,10 +21,10 @@ type fileInfo struct {
 	fullpath string
 }
 
-// NewSyncWalBucket will walk the path, and store the key and full path
+// NewSyncWalkBucket will walk the path, and store the key and full path
 // of the object to be downloaded. This will return a new SyncBucketIterator
 // with the data provided from walking the path.
-func NewSyncWalBucket(fileconfig FileDetail, objects *s3.ListObjectsV2Output, iter *SyncBucketIterator) {
+func NewSyncWalkBucket(fileconfig FileDetail, objects *s3.ListObjectsV2Output, iter *SyncBucketIterator) {
 	dirpath := fileconfig.DirectoryPath
 	fInfos := []fileInfo{}
 
